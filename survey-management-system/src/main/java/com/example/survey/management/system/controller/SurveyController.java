@@ -17,6 +17,12 @@ public class SurveyController {
        return surveyService.createSurvey(survey);
     }
 
+    //get Survey by id
+    @GetMapping("survey/surveyId/{surveyId}")
+    public Survey getSurveyById(@PathVariable Integer surveyId){
+        return surveyService.getSurveyById(surveyId);
+    }
+
 
     //respondent see the all survey based on their age
 

@@ -30,4 +30,8 @@ public class SurveyService {
         }
         return desiredSurvey;
     }
+
+    public Survey getSurveyById(Integer surveyId) {
+        return surveyRepository.findById(surveyId).orElse(null);
+    }
 }
